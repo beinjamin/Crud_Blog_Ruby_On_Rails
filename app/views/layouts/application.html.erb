@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Roformation</title>
+    <title>Jaures|Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     
     
@@ -22,19 +22,24 @@
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
       <span class="fs-4" href="<%= root_path %>">Ruby And rail</span>
     </a>
-
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <ul class="nav nav-pills">
-      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-      <li class="nav-link"><a href="<%= salut_path %>">Salut</a></li>
+     
+      <li class="nav-link"><a href="<%= posts_path %>">Articles</a></li>
+      <li class="nav-link"><a href="<%= categories_path %>">Catègories</a></li>
     </ul>
   </header>
 </div>
-  
+</nav>
 
   <body>
+  
+  </header>
+</div>
+
+
+
+    
     <div class="container " style="padding-top: 5rem;">
     <%= yield %>
   </div>
