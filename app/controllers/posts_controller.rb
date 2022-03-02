@@ -28,11 +28,21 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  
+
   def def create
     post_params =  params.require(:post).permit(:name,:content)
   end
+
+
+
+
+
   private
+
   def post_params 
     params.require(:post).permit(:name,:content)
   end
+
+
 end
