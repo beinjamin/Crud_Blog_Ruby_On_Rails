@@ -8,7 +8,8 @@
         <p><%= post.content %></p>
         <p>
             <a href="<%= post_path(post.id)  %>" class="btn btn-primary">Lire La Suite</a>
-            <a href="<%= edit_post_path(post.id)  %>" class="btn btn-default">Editer</a>
+            <a href="<%= edit_post_path(post.id)  %>" class="btn btn-bleu">Editer</a>
+            <a href="<%= post_path(post.id)%>" class="btn btn-danger" data-confirm="Etes-vous sure ?" data-method="DELETE" >Supprimer</a>
         </p>
 
 <% end %>
