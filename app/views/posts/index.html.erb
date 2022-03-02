@@ -8,6 +8,12 @@
         <p><%= post.content %></p>
         <p>
             <a href="<%= post_path(post.id)  %>" class="btn btn-primary">Lire La Suite</a>
+            <a href="<%= edit_post_path(post.id)  %>" class="btn btn-default">Editer</a>
         </p>
 
 <% end %>
+
+<p>
+
+<a href="<%= new_post_path %>" class="btn btn-success">Cree Un article</a> 
+</p>
