@@ -4,12 +4,12 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @categories = Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def update
     @category = Category.find(params[:id])
-    @categories.update(category.params)
+    @category.update(category.params)
     redrect_to category_path(@category.id)
 
   end
@@ -24,11 +24,7 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
-  private
 
-  def category_params 
-    params.require(:category).permit(:name,:slug)
-  end
 
   def edit
     @category = Category.find(params[:id])
@@ -38,4 +34,10 @@ class CategoriesController < ApplicationController
     @category = Category.create(category_params)
     redirect_to category_path(@category.id)
   end
+  private
+
+  def category_params 
+    params.require(:category).permit(:name,:slug)
+  end
+
 end
