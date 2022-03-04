@@ -43,7 +43,7 @@
     <div class="container " style="padding-top: 5rem;">
       <% if session[:success] %>
       <div class="alert alert-success"><%= session[:success]%></div>
-
+    <% session.delete(:success) %>
     <% end %>
     <%= yield %>
   </div>
