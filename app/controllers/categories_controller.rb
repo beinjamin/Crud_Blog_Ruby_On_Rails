@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+
+
   def index
     @categories = Category.all
   end
@@ -8,7 +10,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    
+
     @category = Category.find(params[:id])
 
     @category.update(category.params)
