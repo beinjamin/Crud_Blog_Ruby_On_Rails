@@ -2,6 +2,7 @@ class CategoriesController < ApplicationController
 
 
   def index
+    @session = session[:user_id] = { isername:'Jaures', id: 3}
     @categories = Category.all
   end
 

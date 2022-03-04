@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
 
   def index
+    session[:user_id] = 4
     @posts = Post.all
   end
 
@@ -21,7 +22,7 @@ class PostsController < ApplicationController
 
    def update 
     
-   
+   session[:success] = "Article modifier avec success"
     @post.update(post_params)
 
     redirect_to posts_path
