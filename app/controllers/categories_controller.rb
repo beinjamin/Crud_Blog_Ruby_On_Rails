@@ -8,8 +8,11 @@ class CategoriesController < ApplicationController
   end
 
   def update
+    
     @category = Category.find(params[:id])
+
     @category.update(category.params)
+    
     redrect_to category_path(@category.id)
 
   end
@@ -24,16 +27,16 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
-
+  def create
+    @category = Category.create(category_params)
+    redirect_to category_path(@category.id)
+  end
 
   def edit
     @category = Category.find(params[:id])
 
   end
-  def create
-    @category = Category.create(category_params)
-    redirect_to category_path(@category.id)
-  end
+  
   private
 
   def category_params 

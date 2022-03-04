@@ -4,12 +4,12 @@
 
 <% @posts.each do |post| %>
 
-        <h2><%= post.name %></h2>
-        <p><%= post.content %></p>
+        <h2> <%= post.name %></h2>
+        <p>  <%= post.content %></p>
         <p>
             <a href="<%= post_path(post.id)  %>" class="btn btn-primary">Lire La Suite</a>
             <a href="<%= edit_post_path(post.id)  %>" class="btn btn-bleu">Editer</a>
-            <a href="<%= post_path(post.id)%>" class="btn btn-danger" data-confirm="Etes-vous sure ?" data-method="DELETE" >Supprimer</a>
+            <a href="<%= post_path(post.id)%>" class="btn btn-danger" data-confirm="sur ?" data-method="delete">Supprimer</a>
         </p>
 
 <% end %>

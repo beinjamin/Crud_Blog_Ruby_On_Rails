@@ -16,7 +16,9 @@
         <td><%= category.id%></td>
         <td><%= category.name%></td>
         <td>
-            <a href="<%= edit_category_path(category.id)%>" class="btn btn-primary btn-xs">Edité</a>
+            <a href="<%= edit_category_path(category.id)%>" class="btn btn-primary ">Edité</a>
+            <a href="<%= category_path(category.id)%>" class="btn btn-danger" data-confirm="sur ?" data-method="delete">Supprimer</a>
+
         </td>
     </tr>
     <% end %>
