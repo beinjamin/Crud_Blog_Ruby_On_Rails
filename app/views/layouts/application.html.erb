@@ -41,9 +41,9 @@
 
     
     <div class="container " style="padding-top: 5rem;">
-      <% if session[:success] %>
-      <div class="alert alert-success"><%= session[:success]%></div>
-    <% session.delete(:success) %>
+      <% if flash[:notice] %>
+      <div class="alert alert-success"><%= flash[:notice]%></div>
+    
     <% end %>
     <%= yield %>
   </div>

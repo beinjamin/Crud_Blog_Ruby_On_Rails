@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
    def update 
     
-   session[:success] = "Article modifier avec success"
+   flash[:notice] = "Article modifier avec success"
     @post.update(post_params)
 
     redirect_to posts_path
