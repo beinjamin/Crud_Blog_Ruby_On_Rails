@@ -36,12 +36,13 @@ class PostsController < ApplicationController
   
 
   def  create
+    flash[:notice] = "Article Cree avec success"
     post = Post.create(post_params)
-    redirect_to post_path(post.id)
+    redirect_to post_path(post.id) 
   end
 
   def destroy
-    
+    flash[:notice] = "Article Supprimer  avec success"
     @post.destroy
     redirect_to post_path 
   end
