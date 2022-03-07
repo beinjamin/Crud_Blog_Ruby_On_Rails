@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html 
-      format.json {render json: @posts.as_json(only: [:name, :created_at, :id])}
+      format.json {render json: @posts}
 
     
     end
@@ -18,7 +18,12 @@ class PostsController < ApplicationController
 
 
    def show 
-    
+
+   respond_to do |format|
+      format.html 
+      format.json {render json: @post}
+   end 
+
    end
 
    def edit 
