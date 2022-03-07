@@ -7,6 +7,12 @@ class PostsController < ApplicationController
   def index
     session[:user_id] = 4
     @posts = Post.all
+
+    respond_to do |format|
+      format.html 
+      format.json {render json: @posts}
+    
+    end
   end
 
 
