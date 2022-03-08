@@ -12,8 +12,11 @@ def as_json(options = nil)
 end
 
 def ma_super_method_de_validation
-    if name.length != 2
-        errors.add(:name,'le chamm droit etre de deux caractere')
+    if name.nil? || name.length != 20
+        errors.add(:name, :not_2,{ message: 'le champs droit etre de 20 caractere'})
+    end
+    if content.nil? || content.length != 50
+        errors.add(:content, 'le champs droit etre de 50 caractere')
     end
 
 end
