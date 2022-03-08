@@ -1,6 +1,7 @@
 class Post < ApplicationRecord 
 
-    validates :name, length: {in: 3 ...20} , uniqueness: true ,presence: true
+
+    validate :ma_super_method_de_validation
 
 
 
@@ -10,6 +11,10 @@ def as_json(options = nil)
 
 end
 
+def ma_super_method_de_validation
+    if name.length != 2
+        errors.add(:name,'le chamm droit etre de deux caractere')
+    end
 
-    
+end
 end
