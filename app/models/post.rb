@@ -1,6 +1,6 @@
 class Post < ApplicationRecord 
 
-    validates :name, length: {in: 3 ...20} , uniqueness: true 
+    validates :name, length: {in: 3 ...20} , uniqueness: true ,presence: true
 
 
 
