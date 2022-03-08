@@ -1,6 +1,5 @@
 class Post < ApplicationRecord 
-
-    validate_with NameValidator
+     validates_with  NameValidator
 
 
 
