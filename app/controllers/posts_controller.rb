@@ -36,7 +36,7 @@ class PostsController < ApplicationController
   
    flash[:notice] = "Article modifier avec success"
 
-
+   
    if  @post.update(post_params)
     redirect_to posts_path
    else 
