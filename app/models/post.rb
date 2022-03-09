@@ -19,6 +19,8 @@ end
 private
 
 def default_slug 
-    self.slug = name
+    if !self.name.empty? && self.slug.empty?
+    self.slug = name.parameterize
+end
 end
 end
