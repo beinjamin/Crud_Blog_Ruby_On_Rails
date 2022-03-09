@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_02_192742) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_09_230516) do
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "slug"
@@ -21,6 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_02_192742) do
   create_table "posts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.text "content", size: :medium
+    t.string "slug"
   end
 
 end
