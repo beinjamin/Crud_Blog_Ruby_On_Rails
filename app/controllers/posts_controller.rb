@@ -36,7 +36,7 @@ class PostsController < ApplicationController
   
    flash[:notice] = "Article modifier avec success"
 
-
+   
    if  @post.update(post_params)
     redirect_to posts_path
    else 
@@ -68,7 +68,7 @@ class PostsController < ApplicationController
   private
 
   def post_params 
-    params.require(:post).permit(:name,:content)
+    params.require(:post).permit(:name,:content, :slug)
   end
 
   def set_post
